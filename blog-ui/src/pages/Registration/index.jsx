@@ -1,5 +1,6 @@
 import React from 'react'
 import { Box, Typography, TextField, Button, Paper } from '@mui/material'
+import {Link} from 'react-router-dom'
 import './Registration.css'
 
 const Registration = () => {
@@ -52,7 +53,10 @@ const Registration = () => {
                 </Box>
 
                 <Typography variant="body2" className="login-redirect">
-                    Already have an account? <span>Sign in</span>
+                    Already have an account?{' '}
+                    <Link to='/login' className='signin-link'>
+                        Sign in
+                    </Link>
                 </Typography>
 
             </Paper>

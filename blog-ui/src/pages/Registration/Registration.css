@@ -43,8 +43,11 @@
     color: #555;
 }
 
-.login-redirect span {
+.signin-link {
     color: #1976d2;
-    cursor: pointer;
-    font-weight: 500;
+    font-weight: 500 !important;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
 }

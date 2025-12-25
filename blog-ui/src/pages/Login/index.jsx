@@ -11,6 +11,7 @@ import {
 } from '@mui/material';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import {Link} from 'react-router-dom'
 import './Login.css';
 
 const Login = () => {
@@ -65,7 +66,7 @@ const Login = () => {
 
                     <Typography variant="body2" className="signup-text">
                         Don’t have an account?{' '}
-                        <span className="signup-link">Create Account</span>
+                        <Link to='/register' className="signup-link">Create Account</Link>
                     </Typography>
 
                 </CardContent>
