@@ -1,0 +1,35 @@
+.hero-container {
+    width: 100%;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f7fa;
+    text-align: center;
+    padding: 60px 20px;
+    gap: 1rem;
+}
+
+.hero-title {
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #1a1a1a;
+}
+
+.hero-subtitle {
+    max-width: 600px;
+    margin-bottom: 24px;
+    color: #5f6368;
+}
+
+.hero-cta-btn {
+    background-color: #4f46e5;
+    text-transform: none;
+    font-weight: 500;
+    padding: 8px 20px;
+}
+
+.hero-cta-btn:hover {
+    background-color: #4338ca;
+}

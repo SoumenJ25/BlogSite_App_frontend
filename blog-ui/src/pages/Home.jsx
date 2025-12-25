@@ -1,11 +1,9 @@
 import { Typography } from '@mui/material'
-
+import HeroSection from '../components/HeroSection'
 const Home = () => {
   return (
     <>
-      <Typography variant="h4">
-        Home / Landing Page
-      </Typography>
+      <HeroSection />
     </>
   )
 }
