@@ -1,0 +1,50 @@
+.register-page {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #5f6dfc, #6c63ff);
+    padding: 40px 0;
+}
+
+.register-card {
+    width: 420px;
+    padding: 32px;
+    border-radius: 8px !important;
+    text-align: center;
+}
+
+.register-title {
+    font-weight: 600 !important;
+    margin-bottom: 8px !important;
+}
+
+.register-subtitle {
+    color: #666;
+    margin-bottom: 24px !important;
+}
+
+.register-form {
+    margin-top: 16px;
+}
+
+.create-account-btn {
+    margin-top: 24px !important;
+    background-color: #2e7d32 !important;
+    font-weight: 600 !important;
+}
+
+.create-account-btn:hover {
+    background-color: #1b5e20 !important;
+}
+
+.login-redirect {
+    margin-top: 20px !important;
+    color: #555;
+}
+
+.login-redirect span {
+    color: #1976d2;
+    cursor: pointer;
+    font-weight: 500;
+}
