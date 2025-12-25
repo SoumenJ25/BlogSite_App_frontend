@@ -29,7 +29,12 @@ const Header = () => {
                     >
                         Login
                     </Button>
-                    <Button variant="contained" className="register-btn">
+                    <Button
+                        variant="contained"
+                        className="register-btn"
+                        component={RouterLink}
+                        to='/register'
+                    >
                         Register
                     </Button>
                 </Box>
