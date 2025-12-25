@@ -1,13 +1,12 @@
 .hero-container {
     width: 100%;
-    min-height: 320px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #f5f7fa;
     text-align: center;
-    padding: 60px 20px;
+    padding: 60px 0;
     gap: 1rem;
 }
 
