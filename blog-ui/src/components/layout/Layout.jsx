@@ -1,0 +1,16 @@
+
+import Header from './Header/Header'
+import Footer from './Footer/Footer'
+import './index.css'
+
+const Layout = ({ children }) => {
+    return (
+        <div className="layout-container">
+            <Header />
+            <main className="layout-content">{children}</main>
+            <Footer />
+        </div>
+    )
+}
+
+export default Layout
