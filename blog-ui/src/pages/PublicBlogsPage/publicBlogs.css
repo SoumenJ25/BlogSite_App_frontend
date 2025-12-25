@@ -1,0 +1,17 @@
+.public-blogs-page {
+    padding: 40px 80px;
+}
+
+.blog-filters {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.blog-card {
+    cursor: pointer;
+}
+
+.blog-preview {
+    margin: 12px 0;
+}
