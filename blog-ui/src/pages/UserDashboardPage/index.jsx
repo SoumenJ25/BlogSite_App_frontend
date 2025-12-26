@@ -39,7 +39,11 @@ const UserDashboardPage = () => {
     return (
         <>
             <DashboardHeader />
-            <DashboardContent blogs={userBlogs} isDataLoading = {isLoading} />
+            <DashboardContent
+                blogs={userBlogs}
+                isDataLoading={isLoading}
+                fetchBlogsAgain={fetchUserBlogs}
+            />
         </>
     )
 }

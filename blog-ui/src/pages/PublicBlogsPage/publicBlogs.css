@@ -30,3 +30,13 @@
     font-size: 14px !important;
     color: #777 !important;
 }
+
+.delete-account-btn {
+    margin-top: 24px !important;
+    background-color: #d2191c !important;
+    font-weight: 600 !important;
+}
+
+.delete-account-btn:hover {
+    background-color: #5e211b !important;
+}
