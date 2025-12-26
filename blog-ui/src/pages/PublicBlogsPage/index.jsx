@@ -21,9 +21,11 @@ const PublicBlogsPage = () => {
     setSelectedBlog(null)
   }
 
-  const fetchAllPublicBlogs = async () => {
+  const fetchAllPublicBlogs = async (filters = {}) => {
     try {
-      const publicBlogs = await api.get('/blogs/getall')
+      const publicBlogs = await api.get('/blogs/getall', {
+        params: filters
+      })
       console.log('remote logs: public blogs', publicBlogs?.data)
       setBlogs(publicBlogs.data?.data)
     } catch (error) {
@@ -38,7 +40,9 @@ const PublicBlogsPage = () => {
 
   return (
     <Box className="public-blogs-page">
-      <BlogFilters />
+      <BlogFilters
+        onApplyFilters={fetchAllPublicBlogs}
+      />
       <BlogList
         blogs={blogs}
         onBlogClick={handleBlogClick}
