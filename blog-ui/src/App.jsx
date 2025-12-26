@@ -7,20 +7,23 @@ import Login from './pages/Login'
 import Registration from './pages/Registration'
 import PublicBlogsPage from './pages/PublicBlogsPage'
 import UserDashboardPage from './pages/UserDashboardPage'
+import { AuthProvider } from './context/AuthContext'
 
 function App() {
   return (
-    <Router>
-      <Layout>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/register' element={<Registration />} />
-          <Route path='/publicBlogs' element={<PublicBlogsPage />} />
-          <Route path='/user/dashboard' element={<UserDashboardPage />} />
-        </Routes>
-      </Layout>
-    </Router>
+    <AuthProvider>
+      <Router>
+        <Layout>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/register' element={<Registration />} />
+            <Route path='/publicBlogs' element={<PublicBlogsPage />} />
+            <Route path='/user/dashboard' element={<UserDashboardPage />} />
+          </Routes>
+        </Layout>
+      </Router>
+    </AuthProvider>
   )
 }
 
