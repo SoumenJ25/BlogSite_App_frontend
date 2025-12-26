@@ -2,7 +2,7 @@ import React from 'react'
 import { Grid } from '@mui/material'
 import BlogCard from './BlogCard'
 
-const BlogList = ({ blogs, onBlogClick }) => {
+const BlogList = ({ blogs, onBlogClick, fetchBlogsAgain }) => {
   return (
     <Grid container spacing={3}>
       {blogs?.map((blog) => (
@@ -11,6 +11,7 @@ const BlogList = ({ blogs, onBlogClick }) => {
             key={blog._id}
             blog={blog}
             onClick={onBlogClick}
+            fetchBlogsAgain={fetchBlogsAgain}
           />
         </Grid>
       ))}

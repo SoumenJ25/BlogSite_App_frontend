@@ -4,7 +4,7 @@ import BlogList from '../blogs/BlogList'
 import BlogModal from '../blogs/BlogModal'
 import './index.css'
 
-const DashboardContent = ({ blogs, isDataLoading }) => {
+const DashboardContent = ({ blogs, isDataLoading, fetchBlogsAgain }) => {
     const hasBlogs = blogs && blogs.length > 0
     const [selectedBlog, setSelectedBlog] = useState(null)
     const [isModalOpen, setIsModalOpen] = useState(false)
@@ -24,7 +24,11 @@ const DashboardContent = ({ blogs, isDataLoading }) => {
             {hasBlogs && !isDataLoading && (
                 <>
 
-                    <BlogList blogs={blogs} onBlogClick={handleBlogClick} />
+                    <BlogList
+                        blogs={blogs}
+                        onBlogClick={handleBlogClick}
+                        fetchBlogsAgain={fetchBlogsAgain}
+                    />
                     <BlogModal
                         open={isModalOpen}
                         onClose={handleCloseModal}
