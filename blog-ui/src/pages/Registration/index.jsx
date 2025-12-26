@@ -63,7 +63,6 @@ const Registration = () => {
                 email: formValues.email,
                 password: formValues.password
             })
-            console.log('remote logs: Registration success', response?.data)
             alert('User is registered successfully !!')
             navigate('/login')
 

@@ -27,10 +27,8 @@ const PublicBlogsPage = () => {
       const publicBlogs = await api.get('/blogs/getall', {
         params: filters
       })
-      console.log('remote logs: public blogs', publicBlogs?.data)
       setBlogs(publicBlogs.data?.data)
     } catch (error) {
-      console.error('remote logs: failed to fetch all public blogs:', error.response?.data || error.message)
     } finally {
       setIsLoading(false)
     }
