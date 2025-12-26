@@ -26,6 +26,12 @@ const Header = () => {
 
     }
 
+    const handleMyBlogsRedirection = () => {
+        if (!location.pathname.includes('/dashboard') ) {
+            navigate('/user/dashboard')
+        }
+    }
+
     return (
         <AppBar position="static" className="app-header">
             <Toolbar className="header-toolbar">
@@ -69,8 +75,9 @@ const Header = () => {
                             <Button
                                 variant="outlined"
                                 className="my-blog-btn"
-                            // component={RouterLink}
-                            // to='/login'
+                                // component={RouterLink}
+                                // to='/user/createBlog'
+                                onClick={handleMyBlogsRedirection}
                             >
                                 My Blogs
                             </Button>

@@ -7,6 +7,7 @@ import Login from './pages/Login'
 import Registration from './pages/Registration'
 import PublicBlogsPage from './pages/PublicBlogsPage'
 import UserDashboardPage from './pages/UserDashboardPage'
+import CreateBlogPage from './pages/CreateBlogPage'
 import { AuthProvider } from './context/AuthContext'
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Route path='/register' element={<Registration />} />
             <Route path='/publicBlogs' element={<PublicBlogsPage />} />
             <Route path='/user/dashboard' element={<UserDashboardPage />} />
+            <Route path='/user/createBlog' element={<CreateBlogPage />} />
           </Routes>
         </Layout>
       </Router>
