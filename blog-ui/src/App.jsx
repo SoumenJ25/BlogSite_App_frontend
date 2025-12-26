@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import Login from './pages/Login'
 import Registration from './pages/Registration'
 import PublicBlogsPage from './pages/PublicBlogsPage'
+import UserDashboardPage from './pages/UserDashboardPage'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Registration />} />
           <Route path='/publicBlogs' element={<PublicBlogsPage />} />
+          <Route path='/user/dashboard' element={<UserDashboardPage />} />
         </Routes>
       </Layout>
     </Router>
