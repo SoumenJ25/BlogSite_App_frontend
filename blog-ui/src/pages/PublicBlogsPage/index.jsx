@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Box } from '@mui/material'
 import BlogFilters from '../../components/blogs/BlogFilters'
 import BlogList from '../../components/blogs/BlogList'
+import BlogModal from '../../components/blogs/BlogModal.jsx'
 import api from '../../api/axios.js'
 import './publicBlogs.css'
 
@@ -14,6 +15,12 @@ const PublicBlogsPage = () => {
     setSelectedBlog(blog)
     setIsModalOpen(true)
   }
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false)
+    setSelectedBlog(null)
+  }
+
   const fetchAllPublicBlogs = async () => {
     try {
       const publicBlogs = await api.get('/blogs/getall')
@@ -35,6 +42,11 @@ const PublicBlogsPage = () => {
       <BlogList
         blogs={blogs}
         onBlogClick={handleBlogClick}
+      />
+      <BlogModal
+        open={isModalOpen}
+        onClose={handleCloseModal}
+        blog={selectedBlog}
       />
     </Box>
   )
