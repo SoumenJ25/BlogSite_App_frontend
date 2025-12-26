@@ -25,3 +25,9 @@
 .feature-text {
     color: #555;
 }
+
+.feature-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}

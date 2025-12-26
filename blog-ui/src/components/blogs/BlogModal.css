@@ -1,0 +1,27 @@
+.blog-modal-title {
+    font-weight: 600;
+}
+
+.blog-modal-content {
+    padding-top: 8px;
+}
+
+.blog-meta {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.blog-divider {
+    margin: 16px 0;
+}
+
+.blog-article {
+    white-space: pre-line;
+    line-height: 1.6;
+}
+
+.blog-modal-actions {
+    padding: 16px;
+}

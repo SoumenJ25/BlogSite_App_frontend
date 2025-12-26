@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Typography, Button } from '@mui/material';
+import { Link as RouterLink } from 'react-router-dom'
 import './Hero.css';
 
 const Hero = () => {
@@ -16,6 +17,8 @@ const Hero = () => {
             <Button
                 variant="contained"
                 className="hero-cta-btn"
+                component={RouterLink}
+                to='/publicBlogs'
             >
                 Explore Articles
             </Button>
