@@ -2,12 +2,16 @@ import React from 'react'
 import { Grid } from '@mui/material'
 import BlogCard from './BlogCard'
 
-const BlogList = () => {
+const BlogList = ({ blogs, onBlogClick }) => {
   return (
     <Grid container spacing={3}>
-      {[1, 2, 3, 4].map((item) => (
-        <Grid item xs={12} md={6} lg={4} key={item}>
-          <BlogCard />
+      {blogs?.map((blog) => (
+        <Grid xs={12} md={6} lg={4} key={blog._id}>
+          <BlogCard
+            key={blog._id}
+            blog={blog}
+            onClick={onBlogClick}
+          />
         </Grid>
       ))}
     </Grid>
