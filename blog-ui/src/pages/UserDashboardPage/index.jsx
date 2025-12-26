@@ -6,7 +6,6 @@ import { useAuth } from '../../context/AuthContext'
 
 const UserDashboardPage = () => {
     const { isAuthenticated } = useAuth()
-    console.log('remote logs: user is authenticated:', isAuthenticated)
     const [userBlogs, setUserBlogs] = useState([])
     return (
         <>

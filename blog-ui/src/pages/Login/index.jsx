@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react'
 import {
     Box,
     Card,
@@ -8,14 +8,36 @@ import {
     Button,
     InputAdornment,
     IconButton
-} from '@mui/material';
-import Visibility from '@mui/icons-material/Visibility';
-import VisibilityOff from '@mui/icons-material/VisibilityOff';
-import { Link } from 'react-router-dom'
-import './Login.css';
+} from '@mui/material'
+import Visibility from '@mui/icons-material/Visibility'
+import VisibilityOff from '@mui/icons-material/VisibilityOff'
+import { Link, useNavigate } from 'react-router-dom'
+
+import api from '../../api/axios.js'
+import { useAuth } from '../../context/AuthContext'
+import './Login.css'
 
 const Login = () => {
-    const [showPassword, setShowPassword] = React.useState(false);
+    const [showPassword, setShowPassword] = React.useState(false)
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+
+    const navigate = useNavigate()
+    const { login } = useAuth()
+
+    const handleBtnClick = async () => {
+        try {
+            const response = await api.post('/user/login', {
+                email,
+                password
+            })
+            login(response.data.user)
+            navigate('/user/dashboard')
+        } catch (error) {
+            const errorMessage = error.response?.data || error.message
+            alert(JSON.stringify(errorMessage))
+        }
+    }
 
     return (
         <Box className="login-page">
@@ -35,6 +57,8 @@ const Login = () => {
                         label="Email"
                         type="email"
                         margin="normal"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                     />
 
                     <TextField
@@ -56,6 +80,8 @@ const Login = () => {
                                 )
                             }
                         }}
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
 
                     />
 
@@ -63,6 +89,7 @@ const Login = () => {
                         fullWidth
                         variant="contained"
                         className="login-btn"
+                        onClick={handleBtnClick}
                     >
                         SIGN IN
                     </Button>
@@ -75,7 +102,7 @@ const Login = () => {
                 </CardContent>
             </Card>
         </Box>
-    );
-};
+    )
+}
 
-export default Login;
+export default Login

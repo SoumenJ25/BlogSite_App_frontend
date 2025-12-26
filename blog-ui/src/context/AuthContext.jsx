@@ -3,7 +3,7 @@ import React, { createContext, useContext, useEffect, useState } from 'react'
 const AuthContext = createContext(null)
 
 export const AuthProvider = ({ children }) => {
-    const [isAuthenticated, setIsAuthenticated] = useState(false)
+    const [isAuthenticated, setIsAuthenticated] = useState(() => !!sessionStorage.getItem('AccessToken'))
     const [token, setToken] = useState(null)
 
     useEffect(() => {
