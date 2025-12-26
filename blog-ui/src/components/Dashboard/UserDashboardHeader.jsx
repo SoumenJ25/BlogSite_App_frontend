@@ -1,8 +1,10 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import { Box, Typography, Button } from '@mui/material'
 import './index.css'
 
 const DashboardHeader = () => {
+    const navigate = useNavigate()
     return (
         <Box className="dashboard-header">
 
@@ -19,6 +21,7 @@ const DashboardHeader = () => {
                 <Button
                     variant="contained"
                     className="create-blog-btn"
+                    onClick={() => navigate('/user/createBlog')}
                 >
                     Create New Blog
                 </Button>

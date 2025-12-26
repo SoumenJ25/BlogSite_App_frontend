@@ -1,9 +1,11 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import { Button } from '@mui/material'
 import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined'
 import './index.css'
 
 const EmptyDashboard = () => {
+    const navigate = useNavigate()
     return (
         <div className="empty-state">
             <DescriptionOutlinedIcon className="empty-icon" />
@@ -17,6 +19,7 @@ const EmptyDashboard = () => {
             <Button
                 variant="contained"
                 className="empty-cta-btn"
+                onClick={() => navigate('/user/createBlog')}
             >
                 Create Your First Blog
             </Button>

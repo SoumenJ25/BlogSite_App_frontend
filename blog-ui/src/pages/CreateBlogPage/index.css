@@ -1,0 +1,46 @@
+.create-blog-page {
+    min-height: calc(100vh - 160px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 16px;
+    background-color: #f5f6f8;
+}
+
+.create-blog-card {
+    width: 100%;
+    max-width: 720px;
+    padding: 32px;
+    border-radius: 12px;
+}
+
+.create-blog-title {
+    font-weight: 600;
+    text-align: center;
+}
+
+.create-blog-subtitle {
+    text-align: center;
+    color: #666;
+    margin-top: 8px;
+    margin-bottom: 24px;
+}
+
+.create-blog-form {
+    margin-top: 16px;
+}
+
+.create-blog-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.publish-btn {
+    padding: 8px 24px;
+}
+
+.cancel-btn {
+    padding: 8px 24px;
+}

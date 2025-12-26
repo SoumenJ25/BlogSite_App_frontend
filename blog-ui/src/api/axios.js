@@ -16,4 +16,18 @@ api.interceptors.request.use((config) => {
     return config
 }, (error) => Promise.reject(error))
 
+api.interceptors.response.use((response)=>response, (error)=>{
+    const status = error.response.status
+    const message = error.response?.data?.message
+
+    if(status === 401 && message?.toLowerCase().includes('expired')) {
+        sessionStorage.removeItem('AccessToken')
+
+        window.location.href = '/login'
+
+        return Promise.reject(error)
+    }
+    return Promise.reject(error)
+})
+
 export default api
