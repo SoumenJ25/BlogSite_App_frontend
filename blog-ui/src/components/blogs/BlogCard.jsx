@@ -16,8 +16,6 @@ const BlogCard = ({ blog, onClick, fetchBlogsAgain }) => {
     const { isAuthenticated } = useAuth()
 
     const deleteUserBlog = async (blog, id) => {
-        console.log('blog is', blog)
-        console.log('passed id', typeof (id))
         try {
 
             const response = await api.delete('/user/blogs/delete', {
@@ -25,7 +23,6 @@ const BlogCard = ({ blog, onClick, fetchBlogsAgain }) => {
                     blogId: id
                 }
             })
-            alert(JSON.stringify(response.data))
             fetchBlogsAgain()
         } catch (error) {
             alert(JSON.stringify(error.response?.data || error.message))

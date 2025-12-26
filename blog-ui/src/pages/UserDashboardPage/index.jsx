@@ -17,7 +17,6 @@ const UserDashboardPage = () => {
         try {
 
             const response = await api.get('/user/blogs/getall')
-            console.log('remote logs: blogs are', response.data)
             setUserBlogs(response.data.data)
 
         } catch (error) {
