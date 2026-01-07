@@ -1,0 +1,26 @@
+.uc-container {
+  min-height: calc(100vh - 120px); /* header + footer space */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9fafb;
+  text-align: center;
+  padding: 24px;
+}
+
+.uc-image {
+  max-width: 420px;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.uc-title {
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.uc-subtitle {
+  color: #6b7280;
+}

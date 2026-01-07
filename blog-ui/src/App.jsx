@@ -8,6 +8,7 @@ import Registration from './pages/Registration'
 import PublicBlogsPage from './pages/PublicBlogsPage'
 import UserDashboardPage from './pages/UserDashboardPage'
 import CreateBlogPage from './pages/CreateBlogPage'
+import UnderConstruction from './pages/UnderConstruction'
 import { AuthProvider } from './context/AuthContext'
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             <Route path='/publicBlogs' element={<PublicBlogsPage />} />
             <Route path='/user/dashboard' element={<UserDashboardPage />} />
             <Route path='/user/createBlog' element={<CreateBlogPage />} />
+            <Route path='/community' element={<UnderConstruction />} />
           </Routes>
         </Layout>
       </Router>

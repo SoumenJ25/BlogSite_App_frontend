@@ -32,16 +32,18 @@ const FeatureCards = () => {
                 </Card>
             </Link>
 
-            <Card className="feature-card" clickable="true">
-                <CardContent>
-                    <Typography variant="h6" className="feature-title">
-                        Join Our Community
-                    </Typography>
-                    <Typography variant="body2" className="feature-text">
-                        Engage and connect with readers and creators.
-                    </Typography>
-                </CardContent>
-            </Card>
+            <Link to='/community' className='feature-card-link'>
+                <Card className="feature-card" clickable="true">
+                    <CardContent>
+                        <Typography variant="h6" className="feature-title">
+                            Join Our Community
+                        </Typography>
+                        <Typography variant="body2" className="feature-text">
+                            Engage and connect with readers and creators.
+                        </Typography>
+                    </CardContent>
+                </Card>
+            </Link>
 
         </Box>
     )
